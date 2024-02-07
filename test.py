@@ -1,2 +1,3 @@
+suma = 20 + 5
 print("Hola mundo")
-print(10+5)
+print(suma)
