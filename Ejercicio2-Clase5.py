@@ -30,13 +30,13 @@ class Aguila(Animal):
         return "estoy volando"
 
 print("------------------------------------------------")    
-miGato = Animal(4,Tipo.V)    
+miGato = Animal(4,Tipo.V.value)    
 print(f"Mi animal tiene {miGato.cantidad_patas} patas")
 print(f"Mi animal es {miGato.tipo}")
 print(miGato.comer())
 print("------------------------------------------------")
 
-miPerro = Perro(4, Tipo.V, "Piru", "Caniche", )
+miPerro = Perro(4, Tipo.V.value, "Piru", "Caniche", )
 print(f"Mi perro tiene {miPerro.cantidad_patas} patas")
 print(f"Mi perro es {miPerro.tipo}")
 print(f"Mi perro se llama {miPerro.nombre}")
@@ -44,7 +44,7 @@ print(f"Mi perro es de raza {miPerro.raza}")
 print(miPerro.correr())
 print("------------------------------------------------")
 
-miAguila = Aguila(2, Tipo.V)
+miAguila = Aguila(2, Tipo.V.value)
 print(f"Mi Aguila tiene {miAguila.cantidad_patas} patas")
 print(f"Mi Aguila es {miAguila.tipo}")
 print(miAguila.volar())
