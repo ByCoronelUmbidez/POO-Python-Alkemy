@@ -1,0 +1,35 @@
+{% extends "./base.html" %}
+
+{% block title %} Control de Stock {% endblock %}
+
+{% block body %}
+
+<div class="row">
+    <div class="col-md-4 offset-md-4">
+        <h2>Inicio</h2>
+        <div class="card">
+            <div class="card-body">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Proveedores</h4>
+                        <p class="card-text">Ir a listado de productos</p>
+                        <a href="{% url 'listar_proveedores' %}" class="card-link">Ir</a>
+                    </div>
+                </div>   
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Productos</h4>
+                        <p class="card-text">Ir a listado de productos</p>
+                        <a href="{% url 'productos' %}" class="card-link">Ir</a>
+                    </div>
+                </div>   
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
