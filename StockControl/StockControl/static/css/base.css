@@ -1,0 +1,23 @@
+
+
+h1, text {
+    text-align: center;
+    vertical-align: middle;
+    background-color: rgb(127, 255, 212);
+    color: black;
+}
+
+h2 {
+    text-align: center;
+
+}
+
+th.doscolumnas {
+    text-align: center; /* Para centrar el contenido horizontalmente */
+
+}
+
+nav {
+    justify-content: space-around;
+    justify-content: space-between;
+}

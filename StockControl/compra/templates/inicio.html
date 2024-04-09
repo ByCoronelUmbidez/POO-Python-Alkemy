@@ -1,0 +1,53 @@
+{% extends "./base.html" %}
+
+{% block title %} Control de Stock {% endblock %}
+
+{% block body %}
+
+
+<body>
+    <div class="container mt-5">
+      <h1 class="text-center mb-4">Bienvenido al sistema de control de stock</h1>
+      <h2 class="text-center mb-4">A continuación se detallan las acciones que puede realizar en el sistema</h2>
+      <div class="row gx-4">
+        <div class="col-md-6 col-lg-3 mb-4">
+          <div class="card h-100">
+            <div class="card-body d-flex flex-column">
+              <h4 class="card-title text-center py-3">Agregar producto</h4>
+              <p class="card-text text-center p-2">En esta sección puede agregar un producto al stock y a su vez relacionarlo con un proveedor existente o cargar un nuevo proveedor.</p>
+              <a href="{% url 'agregar_producto' %}" class="btn btn-info mt-auto">Ir a agregar producto</a>
+            </div>
+        </div>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-4">
+          <div class="card h-100"> 
+            <div class="card-body d-flex flex-column">
+                <h4 class="card-title text-center py-3">Listado de productos</h4>
+                <p class="card-text text-center p-2">En esta sección puede ver el listado de todos los productos en stock junto con el proveedor al que pertenece. Adicionalmente en el listado tiene la opcion de actualizar y/o eliminar productos.</p>
+                <a href="{% url 'listar_productos' %}" class="btn btn-info mt-auto">Ir al listado de productos</a>
+            </div>
+          </div> 
+        </div>
+        <div class="col-md-6 col-lg-3 mb-4">
+          <div class="card h-100">
+            <div class="card-body d-flex flex-column">
+              <h4 class="card-title text-center py-3">Agregar proveedor</h4>
+              <p class="card-text text-center p-2">En esta sección puede agregar un proveedor nuevo para luego, cuando carga un prodcuto, lo pueda selecionar del listado.</p>
+              <a href="{% url 'agregar_proveedor' %}" class="btn btn-info mt-auto">Ir a agregar proveedor</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-4">
+          <div class="card h-100"> 
+            <div class="card-body d-flex flex-column">
+                <h4 class="card-title text-center py-3">Listado de proveedores</h4>
+                <p class="card-text text-center p-2">En esta sección puede ver el listado de todos los proveedores que se relacionan o relacionaron con algún producto. Tambien puede cargar un proveedor y verlo en el listado. Adicionalmente en el listado tiene la opcion de actualizar y/o eliminar productos.</p>
+                <a href="{% url 'listar_proveedores' %}" class="btn btn-info mt-auto">Ir al listado de proveedores</a>
+            </div>
+          </div> 
+        </div>
+      </div>
+    </div>    
+  </body>
+
+{% endblock %}

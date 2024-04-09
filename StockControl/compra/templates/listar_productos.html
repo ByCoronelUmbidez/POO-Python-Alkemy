@@ -1,0 +1,62 @@
+{% extends "./base.html" %}
+
+{% block title %} Listado de productos {% endblock %}
+
+{% block body %}
+
+<div class="row">
+    <div class="col-10 mx-auto">
+        {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-dismissible alert-success">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <strong class="text-dark">{{ message }}</strong>
+        </div>
+        {% endfor %}
+        {% endif %}
+
+        <div class="col-12 mx-auto">
+            <h1>Listado de Productos</h1>
+            <div class="table-responsive py-4">
+                <table class="table table-striped"> 
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Precio</th>
+                            <th>Stock actual</th>
+                            <th>Proveedor</th>
+                            <th class="doscolumnas" colspan="3">Opciones</th>
+                        </tr>
+                    </thead>
+                    <tbody > 
+                        {% for p in productos %}
+                        <tr> 
+                            <td>{{forloop.counter}}</td>
+                            <td> {{p.id}} </td>
+                            <td> {{p.nombre}} </td>
+                            <td> {{p.precio|floatformat:2}} </td>
+                            <td> {{p.stock_actual|floatformat:0 }}</td>
+                            <td> {{p.proveedor}} </td>
+                            <td><a href="producto_a_actualizar/{{p.id}}" class="btn btn-outline-warning">Actualizar</a></td>
+                            <td><a href="eliminar_producto/{{p.id}}" class="btn btn-outline-danger btnEliminacionProducto">Eliminar</a></td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-4"> 
+        <div class="col-sm-2 mx-auto">
+            <div class="form-group">
+                <a href="{% url 'agregar_producto' %}" class="btn btn-info btn-block">Ir a Crear producto</a>
+            </div>
+        </div>
+    </div>
+</div>
+  
+
+{% endblock %}        
+ 
